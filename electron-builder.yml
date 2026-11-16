@@ -1,0 +1,46 @@
+appId: com.paperdaily.app
+productName: PaperDaily
+copyright: Copyright © 2026 PaperDaily Team
+
+directories:
+  output: release
+  buildResources: .
+
+files:
+  - out/**/*
+  - package.json
+
+asar: true
+asarUnpack:
+  - node_modules/better-sqlite3/**/*
+
+extraResources:
+  - from: icon.ico
+    to: icon.ico
+  - from: src/main/db/migrations
+    to: migrations
+
+win:
+  executableName: PaperDaily
+  icon: icon.ico
+  requestedExecutionLevel: asInvoker
+  target:
+    - target: nsis
+      arch:
+        - x64
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: PaperDaily
+  uninstallDisplayName: PaperDaily ${version}
+  deleteAppDataOnUninstall: false
+  runAfterFinish: true
+  installerIcon: icon.ico
+  uninstallerIcon: icon.ico
+  installerHeaderIcon: icon.ico
+  artifactName: PaperDaily-Setup-${version}-${arch}.${ext}

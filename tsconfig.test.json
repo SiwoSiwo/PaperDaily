@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.node.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".test-out",
+    "rootDir": "."
+  },
+  "include": [
+    "tests/**/*.ts",
+    "src/main/services/result-parser.ts",
+    "src/main/lib/logger.ts",
+    "src/shared/types/models.ts"
+  ],
+  "exclude": ["node_modules"]
+}

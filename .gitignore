@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+out/
+build/
+release/
+.test-out/
+
+# Electron
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# OS
+.DS_Store
+desktop.ini
+
+# TypeScript
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
